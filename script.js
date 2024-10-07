@@ -47,6 +47,6 @@ setInterval(function() {
   }
   var delta = Date.now() - start; // milliseconds elapsed since start
   formatted = new Date(delta).toISOString().substr(11, 8); // convert to hh:mm:ss
-  text = fomatted + "\n" + savedTimes.join("\n");
+  text = formatted + "\n" + savedTimes.join("\n");
   document.getElementById("main").innerText = text;
 }, 1000);
