@@ -27,7 +27,10 @@ async function checkMessage(message) {
   if (message == "!start" && start == null) {
     start = Date.now();
   } else if (message == "!cum") {
-    savedTimes.push(Date.now());
+    //savedTimes.push(Date.now());
+    var delta = Date.now() - start; // milliseconds elapsed since start
+    formatted = "💦 " + new Date(delta).toISOString().substr(11, 8); // convert to hh:mm:ss
+    savedTimes.push(formatted);
   } else if (message == "!uncum") {
     savedTimes.pop();
   }
