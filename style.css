@@ -1,0 +1,15 @@
+
+@font-face {
+font-family:'crayon';
+src:url('https://files.catbox.moe/6tvr2f.otf');
+}
+
+div { 
+  filter: drop-shadow(0 0 1.5vh #333) drop-shadow(0 0 1vh #fbc)  drop-shadow(0 0 1vh #848275); 
+  color: white !important; 
+  font-family: 'crayon';
+  text-align: center;
+  font-size: 10vh;
+}
+
+body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
