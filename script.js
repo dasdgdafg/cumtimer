@@ -23,6 +23,10 @@ function reconnect() {
   };
 }
 
+function updateSize() {
+  document.getElementById("main").style.fontSize = Math.min(10, 80 / (savedTimes.length + 1)) + "vh";
+}
+
 async function checkMessage(message) {
   if (message == "!start" && start == null) {
     start = Date.now();
@@ -31,8 +35,10 @@ async function checkMessage(message) {
     var delta = Date.now() - start; // milliseconds elapsed since start
     formatted = "💦 " + new Date(delta).toISOString().substr(11, 8); // convert to hh:mm:ss
     savedTimes.push(formatted);
+    updateSize();
   } else if (message == "!uncum") {
     savedTimes.pop();
+    updateSize();
   }
 }
 
